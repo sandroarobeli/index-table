@@ -1,23 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
+import { ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import Typography from "@mui/material/Typography";
+
+import { lightTheme, darkTheme } from "./theme/theme";
 
 const App = () => {
+  const [lightMode, setLightMode] = useState(true);
+  const switchTheme = () => {
+    setLightMode((prevMode) => !prevMode);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={lightMode ? lightTheme : darkTheme}>
+      <CssBaseline />
+      <Typography>this is our table of contents</Typography>
+      <Typography
+        sx={{
+          background: "#2780E3",
+        }}
+      >
+        this is our table of contents
+      </Typography>
+      <Typography sx={{ background: lightTheme.palette.secondary.main }}>
+        this is our table of contents
+      </Typography>
+      <Typography sx={{ background: lightTheme.palette.error.main }}>
+        this is our table of contents
+      </Typography>
+      <Typography sx={{ background: lightTheme.palette.success.main }}>
+        this is our table of contents
+      </Typography>
+      <button onClick={switchTheme}>Theme</button>
+    </ThemeProvider>
   );
 };
 
