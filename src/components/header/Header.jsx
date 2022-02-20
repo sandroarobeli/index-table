@@ -11,7 +11,7 @@ import { styles } from "./styles";
 const Header = (props) => {
   return (
     <AppBar position="static" color="primary">
-      <Toolbar sx={{ padding: "1rem" }}>
+      <Toolbar sx={styles.toolbar}>
         <Typography variant="h6" component="h1" sx={styles.header}>
           S&P 500 Returns 1970 - 2021
         </Typography>

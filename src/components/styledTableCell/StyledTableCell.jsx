@@ -11,7 +11,7 @@ const StyledTableCell = styled(CustomTableCell, {
   slot: "Root",
 })((props) => ({
   padding: "1rem 1rem 1rem 1.5rem",
-  color: props.isColorCoded ? (props.positiveReturn ? "#19B64E" : "#FF0039") : "inherit",
+  color: props.isColorCoded ? (props.positiveReturn ? "#2D8806" : "#D12929") : "inherit",
   fontSize: "0.75rem",
   [lightTheme.breakpoints.up("mobile")]: {
     fontSize: "1rem",

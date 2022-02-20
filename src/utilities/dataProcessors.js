@@ -2,7 +2,7 @@ import originalSeries from "../data/sp500.json";
 // Current app only uses data between 1970 and 2021 and displays it in ascending order
 const ascendingOrder = originalSeries.slice(0, 52).reverse();
 
-// Auxiliary function to derive cumulative returns:
+// Auxiliary function to derive cumulative returns
 const getCumulative = (arr) => {
   let result = [];
   let sum = 0;
@@ -30,7 +30,7 @@ export const generateInclusiveSeries = (range) => {
     Number.parseFloat(year.totalReturn)
   );
 
-  // Generates an array of corresponding years' cumulative returns
+  // Generates an array of corresponding years' cumulative returns. AA
   const cumulativeReturnsPerYear = getCumulative(totalReturnsPerYear);
 
   // Appends cumulative returns to each year object as a new property

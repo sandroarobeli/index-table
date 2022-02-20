@@ -1,6 +1,9 @@
 import { lightTheme } from "../../theme/theme";
 
 export const styles = {
+  toolbar: {
+    padding: "1rem",
+  },
   header: {
     flexGrow: 1,
     fontsize: "0.75rem",
