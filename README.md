@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# S&P 500 Interactive Returns Table 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 Design and styling using [Material UI v5](https://mui.com).
